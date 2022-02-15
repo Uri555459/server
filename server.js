@@ -16,7 +16,7 @@ const postsRoute = require('./routes/posts')
 app.use('/', postsRoute)
 
 // Connect DB
-mongoose.connect('mongodb+srv://admin:admin@myserver.dwiu0.mongodb.net/post?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://admin:PASSWORD@myserver.dwiu0.mongodb.net/post?retryWrites=true&w=majority')
     .then(() => {
         console.log('DB connect')
         app.listen(port, console.log(`Server started. Port ${port}`))
